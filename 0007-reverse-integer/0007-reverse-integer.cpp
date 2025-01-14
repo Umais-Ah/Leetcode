@@ -1,7 +1,7 @@
 class Solution {
 public:
       int reverse(int x) {
-                int revNum = 0;  // This will store the reversed number
+                int revNum = 0;  
 
     while (x != 0) {
         int last = x % 10;  

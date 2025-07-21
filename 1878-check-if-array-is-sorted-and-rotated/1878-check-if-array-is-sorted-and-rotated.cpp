@@ -1,36 +1,16 @@
 class Solution {
 public:
 bool check(vector<int>& nums) {
-    vector<int> nums2;
-    bool isSort=true;
-    int x=0;
-
-    for(int i=0;i<nums.size()-1;i++){
-     if( nums[i] > nums[i+1]){
-         isSort=false;
-         x=i+1;
-         break;
+    int count = 0;
+    int n = nums.size();
+    
+    for (int i = 0; i < n; i++) {
+        if (nums[i] > nums[(i + 1) % n]) {
+            count++;
+            if (count > 1)
+                return false;
+        }
     }
-    }
-
-    if(x > 0){
-    isSort=true;
-
-    for(int i=0;i<nums.size();i++){
-        nums2.push_back( nums[(i+x) %  nums.size()]);
-    }
-
-
-    for(int i=0;i<nums.size()-1;i++){
-        if( nums2[i] > nums2[i+1]){
-            isSort=false;
-            break;
-       }
-       }
-
-    }
-
- 
-    return isSort;
-    }
+    return true;
+}
 };

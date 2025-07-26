@@ -1,7 +1,6 @@
 class Solution {
 public:
     void sortColors(vector<int>& arr) {
-    int count1=0,count2=0,count3=0;
     int n=arr.size();
     int mid=0;
     int low=0;

@@ -8,8 +8,12 @@ public:
 
    for(int i=1;i<arr.size();i++){
       profit = arr[i]- mini;
-      maxi=max(profit,maxi);
-      mini=min(mini,arr[i]);
+      if(profit > maxi){
+        maxi=profit;
+      }
+      if(arr[i] < mini){
+        mini=arr[i];
+      }
    }
 
    return maxi;

@@ -1,17 +1,15 @@
 class Solution {
 public:
     int maxProfit(vector<int>& arr) {
-    int buy=arr[0];
-   int profit=0;
-   for(int i=0;i<arr.size();i++){
-        if(arr[i] < buy){
-            buy=arr[i];
-        }
-        else if(arr[i] - buy > profit ){
-          profit=arr[i]-buy;
-            }
-        }
-        return profit;
+   int max_profit = 0;
+int current_profit = 0;
+
+for(int i = 1; i < arr.size(); i++){
+    current_profit += arr[i] - arr[i - 1];  // Daily profit/loss
+    if(current_profit < 0) current_profit = 0;  // Reset if losing
+    if(current_profit > max_profit) max_profit = current_profit;
+}
+return max_profit;
     }
 
     

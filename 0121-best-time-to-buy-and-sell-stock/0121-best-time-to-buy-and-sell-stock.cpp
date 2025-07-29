@@ -6,7 +6,7 @@ public:
 
    for(int i=1;i<arr.size();i++){
      int profit = arr[i]- mini;
-      maxi=max(profit,maxi);
+      maxi=max(maxi,profit);
       mini=min(mini,arr[i]);
    }
 

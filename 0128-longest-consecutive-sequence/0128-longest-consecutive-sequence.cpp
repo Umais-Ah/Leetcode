@@ -11,7 +11,7 @@ public:
             count++;
             maxi=max(count,maxi);
         }
-         else if(arr[i]-1 < arr[i+1]-1){
+         else if(arr[i] != arr[i+1]){
             count=1;
         }
     }

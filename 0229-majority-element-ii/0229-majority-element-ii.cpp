@@ -1,30 +1,24 @@
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& arr) {
-   int n=arr.size();
-   vector<int> v;   bool repeat=false;
+    vector<int> v;  int n=arr.size();
     for(int i=0;i<n;i++){
-        bool repeat=false;
-        int count=0;
-       
-            for(int val : v){
-                if(val==arr[i]){
-                    repeat=true;
+        if(v.size()==0 || v[0] != arr[i]){
+            int cnt=0;
+            for(int j=0;j<n;j++){
+                if(arr[i]==arr[j]){
+                  cnt++;
                 }
             }
-
-        if(repeat!=true){
-         for(int j=0;j<n;j++){
-            if(arr[i]==arr[j]){
-                count++;
-            }
-         }
-           if(count > n/3){
-               v.push_back(arr[i]);
-            }
+            if(cnt > n/3){
+                v.push_back(arr[i]);
+            }   
         }
+        if(v.size()==2){
+                break;
+            }
     }
-    return v;
+      return v;
     }
 
 };

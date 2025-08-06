@@ -1,24 +1,20 @@
 class Solution {
 public:
     vector<int> majorityElement(vector<int>& arr) {
-    vector<int> v;  int n=arr.size();
+    vector<int> v; int n=arr.size();
+    unordered_map<int,int> hashmap;
     for(int i=0;i<n;i++){
-        if(v.size()==0 || v[0] != arr[i]){
-            int cnt=0;
-            for(int j=0;j<n;j++){
-                if(arr[i]==arr[j]){
-                  cnt++;
-                }
-            }
-            if(cnt > n/3){
-                v.push_back(arr[i]);
-            }   
-        }
-        if(v.size()==2){
-                break;
-            }
+      hashmap[arr[i]]++;
+     if(hashmap[arr[i]] > n/3 && (v.size()==0 || v[0] != arr[i])){
+        v.push_back(arr[i]);
+        hashmap[arr[i]]=-1; 
+      }
+      if(v.size()==2){
+        break;
+      }
     }
-      return v;
+ 
+     return v;
     }
 
 };

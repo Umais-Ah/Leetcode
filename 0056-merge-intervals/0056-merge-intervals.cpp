@@ -4,26 +4,16 @@ vector<vector<int>> merge(vector<vector<int>>& arr) {
  int n=arr.size(); vector<vector<int>> ans;    
    
     sort(arr.begin(),arr.end());
-    int i=0;
-    while(i < n){
-        int count=1;
-        int start=arr[i][0];
-        int end=arr[i][1];
-        int j=i+1;    
-        while( j < n && end >= arr[j][0] ){
-            end=max(end,arr[j][1]);
-            count++; 
-            j++;
+    
+    for(int i=0;i<n;i++){
+        if(ans.empty() ||  ans.back()[1] < arr[i][0]){
+            ans.push_back(arr[i]);
         }
-        ans.push_back({start,end});
-        i+=count;
+        else{
+            ans.back()[1]=max(ans.back()[1],arr[i][1]);
+        }
     }
 
-    return ans;
-
- 
+    return ans; 
    }
-
-   
-  
 };

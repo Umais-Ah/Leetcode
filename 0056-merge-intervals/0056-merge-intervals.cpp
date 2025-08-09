@@ -12,6 +12,9 @@ vector<vector<int>> merge(vector<vector<int>>& arr) {
             arr[i][1]=max(arr[i][1],arr[j][1]);
             hash[j]=1;
           }
+          else if (arr[i][1] < arr[j][0]){
+            break;
+          }
     }
     vector<int> temp={{arr[i][0], arr[i][1]}};
     ans.push_back(temp);

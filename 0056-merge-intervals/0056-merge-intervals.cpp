@@ -13,7 +13,7 @@ vector<vector<int>> merge(vector<vector<int>>& arr) {
            if(end >= arr[j][0]){
              end=max(end,arr[j][1]);
            }
-           else if(end < arr[j][0]){
+           else {
              break;
            }
      }

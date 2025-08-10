@@ -1,30 +1,23 @@
 class Solution {
 public:
  vector<int> findErrorNums(vector<int>& arr) {
-    int n=arr.size();
-    vector<int> hash(n+1, 0); int repeating=-1; int missing=-1;
-  
-  for(int i=0;i<n;i++){
-    hash[arr[i]]++;
-  }
-
-  for(int i=1;i<n+1;i++){
+    long long n=arr.size();
+    long long  sn=n*(n+1)/2;
+    long long sn2=(n)*(n+1)*(2*n+1)/6; 
+    long long  s=0; long long  s2=0;
+    for(int i=0;i<n;i++){
+       s+=arr[i];
+       s2+=(long long)arr[i]*(long long)arr[i];
+    }   
+    long long val1=s-sn;//x-y
+    long long val2=s2-sn2;//x^2-y^2
+    val2=val2/val1;//x+y
     
-    if(hash[i]==0){
-        missing=i;
-    }
-    if(hash[i]==2){
-        repeating=i;
-    }
+    long long x=(val1 + val2)/2;
+    long long y=val2-x;
 
-    if(missing !=-1 && repeating != -1){
-        break;
-     }
-    }
-    
-    vector<int> ans={repeating,missing}; 
-    return ans;
 
+    return{int(x),int(y)};
         
     }
     

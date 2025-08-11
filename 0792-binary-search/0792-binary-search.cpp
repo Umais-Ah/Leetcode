@@ -1,22 +1,19 @@
 class Solution {
 public:
+int recursive(vector<int>& arr, int low, int high, int target) {
+    if (high < low) 
+        return -1; 
+
+    int mid = (low + high) / 2;
+
+    if (arr[mid] == target) 
+        return mid;
+    else if (arr[mid] > target) 
+        return recursive(arr, low, mid - 1, target); 
+    else 
+        return recursive(arr, mid + 1, high, target);
+}
   int search(vector<int>& arr, int target) {
-  int n=arr.size();
-  int high=n-1;
-  int low=0;
- 
-  while(high  >= low){
-  int mid=(high + low)/2;
-  if(arr[mid] > target){
-    high=mid-1;
-  }
-  else if(arr[mid] < target) {
-    low=mid+1;
-  }
-  else{
-    return mid;
-  }
-  }
-  return -1;
+       return recursive(arr,0,arr.size()-1,target);
     }
 };

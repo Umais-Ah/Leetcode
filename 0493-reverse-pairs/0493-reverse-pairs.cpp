@@ -1,23 +1,27 @@
 class Solution {
 public:
+
+int countPair(int low ,int mid,int high,vector<int> &arr){
+    int j=mid+1; int count=0;
+    for(int i=low;i<=mid;i++){
+    while(j<=high && (long long) arr[i] > 2 * (long long)arr[j]){
+           j++;       
+    }
+
+    count+=j-(mid+1);
+    }
+
+   return count;
+
+}
+
 int merge(vector<int> &arr,int low,int mid,int high){
     vector<int> v;
     int left=low;
     int right=mid+1;
-    int count=0;
-
-int j=mid+1;
-for(int i=low;i<=mid;i++){
-
-   while(j<=high && (long long) arr[i] > 2LL * arr[j]){
-           j++;       
-   }
-
-   count+=(j-(mid+1));
-}
-
-
-
+   
+   int count=countPair(low,mid,high,arr);
+   
   while(left<=mid && right <= high){
     if(arr[left] <= arr[right]){
         v.push_back(arr[left]);

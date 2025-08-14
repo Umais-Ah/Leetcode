@@ -5,7 +5,11 @@ public:
     int mini=INT_MAX;
     while(low <= high){
     int mid=(low + high )/2;
-    if(arr[mid] >= arr[low]){
+    if(arr[low] <= arr[high]){
+      mini=min(mini,arr[low]);
+      return mini ;
+    }
+    else if(arr[mid] >= arr[low]){
                mini=min(mini,arr[low]);
                low=mid+1;
     }

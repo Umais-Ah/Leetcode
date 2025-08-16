@@ -79,6 +79,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0560-subarray-sum-equals-k](https://github.com/Umais-Ah/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0645-set-mismatch](https://github.com/Umais-Ah/Leetcode/tree/master/0645-set-mismatch) |
 | [0792-binary-search](https://github.com/Umais-Ah/Leetcode/tree/master/0792-binary-search) |
+| [1848-sum-of-unique-elements](https://github.com/Umais-Ah/Leetcode/tree/master/1848-sum-of-unique-elements) |
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/Umais-Ah/Leetcode/tree/master/1878-check-if-array-is-sorted-and-rotated) |
 | [2048-build-array-from-permutation](https://github.com/Umais-Ah/Leetcode/tree/master/2048-build-array-from-permutation) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/Umais-Ah/Leetcode/tree/master/2271-rearrange-array-elements-by-sign) |
@@ -93,6 +94,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/Umais-Ah/Leetcode/tree/master/0268-missing-number) |
 | [0560-subarray-sum-equals-k](https://github.com/Umais-Ah/Leetcode/tree/master/0560-subarray-sum-equals-k) |
 | [0645-set-mismatch](https://github.com/Umais-Ah/Leetcode/tree/master/0645-set-mismatch) |
+| [1848-sum-of-unique-elements](https://github.com/Umais-Ah/Leetcode/tree/master/1848-sum-of-unique-elements) |
 ## Binary Search
 |  |
 | ------- |
@@ -135,6 +137,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0169-majority-element](https://github.com/Umais-Ah/Leetcode/tree/master/0169-majority-element) |
 | [0229-majority-element-ii](https://github.com/Umais-Ah/Leetcode/tree/master/0229-majority-element-ii) |
+| [1848-sum-of-unique-elements](https://github.com/Umais-Ah/Leetcode/tree/master/1848-sum-of-unique-elements) |
 ## Simulation
 |  |
 | ------- |

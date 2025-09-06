@@ -18,8 +18,6 @@ public:
           }
 
        temp=head;
-       if(count%2==0) count=count+1;
-       int i=0;
        
         for(int i=0;i<count/2;i++){
             temp=temp->next;
